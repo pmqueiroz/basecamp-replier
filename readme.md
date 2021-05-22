@@ -1,3 +1,7 @@
+[chrome-url]: https://github.com/pmqueiroz/basecamp-replier/releases/download/v0.0.1/basecamp-replier-0.0.1-chrome.zip
+[mozilla-url]: https://github.com/pmqueiroz/basecamp-replier/releases/download/v0.0.1/basecamp_replier-0.0.1-mozilla.xpi
+
+
 <h1 align="center">Basecamp 3 Replier Chrome Extension</h1>
 
 ## How it works
@@ -8,21 +12,31 @@
 ## How to install
 
 
-### Download here
+### Chrome
 
-[![Button Alternative](https://github-readme-perks.vercel.app/api/button?content=Download%20%20&link=https://github.com/pmqueiroz/basecamp-replier/archive/refs/tags/v0.0.1.zip)](https://github.com/pmqueiroz/basecamp-replier/archive/refs/tags/v0.0.1.zip)
+[![Button Alternative](https://github-readme-perks.vercel.app/api/button?content=Download%20%20&link=https://github.com/pmqueiroz/basecamp-replier/archive/refs/tags/v0.0.1.zip)][chrome-url]
 
 * Unzip tha downloaded file in a safe folder
-* Open [extensions](chrome://extensions) tab (type 'chrome://extensions' on address bar)
+* Open extensions page (type 'chrome://extensions' on address bar)
 * Enable developer mode
 * Click on **Load Unpacked**
 * Select the extension folder where you unzip the file (#1)
 
-Well Done :)
+
+### Mozilla
+
+[![Button Alternative](https://github-readme-perks.vercel.app/api/button?content=Download%20%20&link=https://github.com/pmqueiroz/basecamp-replier/archive/refs/tags/v0.0.1.zip)][mozilla-url]
+
+* Save the downloaded file in a safe folder
+* Open extensions page (type 'about:addons' on address bar)
+* Click on **Cog Icon** on the top of the page
+* Click on **Install from a file**
+* Select the extension file (#1)
 
 ## Todo Features
 
 - [ ] Insert reply button on new messages
+- [ ] Insert reply button on new route
 - [ ] Options
    - [ ] Switch display author name
    - [ ] Change message prefix
