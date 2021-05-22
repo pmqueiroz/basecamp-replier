@@ -1,7 +1,7 @@
 {
-   "name": "MyExtension",
-   "version": "1.0",
-   "description": "Gotta catch Youtube events!",
+   "name": "Basecamp Replier",
+   "version": "0.0.1",
+   "description": "Gives you a way to reply messages on basecamp 3",
    "permissions": ["activeTab", "http://*/*"],
    "manifest_version": 2,
    "content_scripts": [
