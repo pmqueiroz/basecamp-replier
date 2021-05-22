@@ -19,3 +19,10 @@
 * Select the extension folder where you unzip the file (#1)
 
 Well Done :)
+
+## Todo Features
+
+- [ ] Insert reply button on new messages
+- [ ] Options
+   - [ ] Switch display author name
+   - [ ] Change message prefix
