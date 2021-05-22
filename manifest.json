@@ -1,0 +1,16 @@
+{
+   "name": "MyExtension",
+   "version": "1.0",
+   "description": "Gotta catch Youtube events!",
+   "permissions": ["activeTab", "http://*/*"],
+   "manifest_version": 2,
+   "content_scripts": [
+      {
+         "matches": [
+            "*://*.3.basecamp.com/*"
+         ],
+         "js": ["src/index.js"],
+         "css": ["src/style.css"]
+      }
+   ]
+}
