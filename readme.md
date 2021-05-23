@@ -2,7 +2,7 @@
 [mozilla-url]: https://github.com/pmqueiroz/basecamp-replier/releases/download/v0.0.2/basecamp_replier-0.0.2-mozilla.xpi
 
 
-<h1 align="center">Basecamp 3 Replier Chrome Extension</h1>
+<h1 align="center">Basecamp 3 Replier Extension</h1>
 
 ## How it works
 
