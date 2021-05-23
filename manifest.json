@@ -2,7 +2,7 @@
    "name": "Basecamp Replier",
    "version": "0.0.2",
    "description": "Gives you a way to reply messages on basecamp 3",
-   "permissions": ["activeTab", "*://*.3.basecamp.com/*", "storage"],
+   "permissions": ["*://*.3.basecamp.com/*", "storage"],
    "manifest_version": 2,
    "options_ui": {
       "page": "src/options/index.html",
