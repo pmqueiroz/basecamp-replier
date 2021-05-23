@@ -1,7 +1,19 @@
+let answerSymbol
+let hideAuthor
+
+let hasChangedOnLastSeconds = false
+
+chrome.storage.sync.get({
+   answerSymbol: '❯',
+   hideAuthor: false
+}, function(items) {
+   answerSymbol = items.answerSymbol
+   hideAuthor = items.hideAuthor
+});
+
 const input = document.getElementsByTagName('bc-require')[0].getElementsByTagName('trix-editor')[0]
 
 const messageContainers = document.getElementsByClassName('chat-line__bubble')
-const avatarContainers = document.getElementsByClassName('chat-line__avatar')
 
 function sanitizeElements(input) {
    function sanitize() {
@@ -23,7 +35,7 @@ function createMessage(previousMessageValue, messageValue) {
    const message = document.createElement('div')
    const br = document.createElement('br')
    const previousMessage = document.createTextNode(sanitizeElements(previousMessageValue).replace('&nbsp;', ''))
-   const messageText = document.createTextNode(`>>> ${messageValue}`)
+   const messageText = document.createTextNode(`${answerSymbol} ${messageValue}`)
 
    message.appendChild(previousMessage)
    message.appendChild(br)
@@ -33,23 +45,49 @@ function createMessage(previousMessageValue, messageValue) {
    input.appendChild(message)
 }
 
-Object.entries(messageContainers).map((messageContainerArr) => {
-   const messageContainer = messageContainerArr[1]
-   
-   const author = messageContainer.getElementsByClassName('chat-line__author')[0].innerHTML
+function insertReplyOnButton() {
+   Object.entries(messageContainers).map((messageContainerArr) => {
 
-   const messageBody = messageContainer.getElementsByClassName('chat-line__body')[0].innerHTML
-   const metaContainer = messageContainer.getElementsByClassName('chat-line__meta')[0]
-   
-   const button = document.createElement('button')
-   const buttonValue = document.createTextNode('↶')
-   button.className = 'chat-line__reply'
-   button.appendChild(buttonValue)
-   metaContainer.appendChild(button)
+      const messageContainer = messageContainerArr[1]
+      const oldButton = messageContainer.getElementsByClassName('chat-line__reply')[0]
 
-   button.addEventListener("click", function() {
-      const currentMessage = sanitizeElements(String(document.getElementsByTagName('bc-require')[0].getElementsByTagName('trix-editor')[0].innerHTML))
-      createMessage(`${author}: ${messageBody}`, currentMessage)
+      if(oldButton && oldButton.parentNode) oldButton.parentNode.removeChild(oldButton)
+      
+      const author = messageContainer.getElementsByClassName('chat-line__author')[0].innerHTML
+
+      const messageBody = messageContainer.getElementsByClassName('chat-line__body')[0].innerHTML
+      const metaContainer = messageContainer.getElementsByClassName('chat-line__meta')[0]
+      
+      const button = document.createElement('button')
+      const buttonValue = document.createTextNode('↶')
+      button.className = 'chat-line__reply'
+      button.appendChild(buttonValue)
+      metaContainer.appendChild(button)
+
+      button.addEventListener("click", function() {
+         const currentMessage = sanitizeElements(String(document.getElementsByTagName('bc-require')[0].getElementsByTagName('trix-editor')[0].innerHTML))
+         createMessage(`${!hideAuthor ? `${author} :` : ''} ${messageBody}`, currentMessage)
+      })
    })
-})
+}
 
+insertReplyOnButton()
+
+const messagesInfiniteList = document.getElementsByTagName('bc-grouped-dates')[0]
+messagesInfiniteList.addEventListener('DOMNodeInserted', function () { 
+
+   if(hasChangedOnLastSeconds) {
+      return
+   } else {
+      hasChangedOnLastSeconds = true
+   }
+
+}, false)
+
+setInterval(function(){ 
+   if(hasChangedOnLastSeconds) {
+      insertReplyOnButton()
+   }
+
+   hasChangedOnLastSeconds = false
+ }, 5000);

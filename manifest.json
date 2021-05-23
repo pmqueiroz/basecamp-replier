@@ -2,8 +2,12 @@
    "name": "Basecamp Replier",
    "version": "0.0.1",
    "description": "Gives you a way to reply messages on basecamp 3",
-   "permissions": ["activeTab", "http://*/*"],
+   "permissions": ["activeTab", "*://*.3.basecamp.com/*", "storage"],
    "manifest_version": 2,
+   "options_ui": {
+      "page": "src/options/index.html",
+      "open_in_tab": true
+    },
    "content_scripts": [
       {
          "matches": [
@@ -12,5 +16,12 @@
          "js": ["src/index.js"],
          "css": ["src/style.css"]
       }
-   ]
+   ],
+   "browser_action": {
+      "default_title": "Basecamp Replier Options",
+      "default_popup": "src/options/index.html",
+      "default_icon": {
+         "52": "src/img/logo-52.png"
+       }
+    }
 }
