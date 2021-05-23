@@ -85,7 +85,7 @@ There are many forms to contribute with the project, first of all you can give t
 
 If you want do help with the code follow the steps bellow
 
-```ps
+```shell
 # Fork using GitHub official command line
 # If you don't have the GitHub CLI, use the web site to do that.
 $ gh repo fork pmqueiroz/basecamp-replier
