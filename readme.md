@@ -37,7 +37,7 @@
 
 - [*] Insert reply button on new messages
 - [ ] Insert reply button on new route
-- [] Options
+- [ ] Options
    - [*] Switch display author name
    - [*] Change message prefix
-   - [] Change answer symbol
+   - [ ] Change answer symbol
