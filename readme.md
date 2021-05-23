@@ -35,8 +35,8 @@
 
 ## Todo Features
 
-- [ ] Insert reply button on new messages
+- [*] Insert reply button on new messages
 - [ ] Insert reply button on new route
-- [ ] Options
-   - [ ] Switch display author name
-   - [ ] Change message prefix
+- [*] Options
+   - [*] Switch display author name
+   - [*] Change message prefix
