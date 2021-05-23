@@ -1,4 +1,4 @@
-[chrome-url]: https://github.com/pmqueiroz/basecamp-replier/releases/download/v0.0.2/basecamp-replier-0.0.2-chrome.zip
+[chrome-url]: https://github.com/pmqueiroz/basecamp-replier/releases/download/v0.0.2/basecamp_replier-0.0.2-chrome.zip
 [mozilla-url]: https://github.com/pmqueiroz/basecamp-replier/releases/download/v0.0.2/basecamp_replier-0.0.2-mozilla.xpi
 
 
