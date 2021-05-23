@@ -1,5 +1,5 @@
-[chrome-url]: https://github.com/pmqueiroz/basecamp-replier/releases/download/v0.0.1/basecamp-replier-0.0.1-chrome.zip
-[mozilla-url]: https://github.com/pmqueiroz/basecamp-replier/releases/download/v0.0.1/basecamp_replier-0.0.1-mozilla.xpi
+[chrome-url]: https://github.com/pmqueiroz/basecamp-replier/releases/download/v0.0.2/basecamp-replier-0.0.2-chrome.zip
+[mozilla-url]: https://github.com/pmqueiroz/basecamp-replier/releases/download/v0.0.2/basecamp_replier-0.0.2-mozilla.xpi
 
 
 <h1 align="center">Basecamp 3 Replier Chrome Extension</h1>
@@ -14,7 +14,7 @@
 
 ### Chrome
 
-[![Button Alternative](https://github-readme-perks.vercel.app/api/button?content=Download%20%20&link=https://github.com/pmqueiroz/basecamp-replier/archive/refs/tags/v0.0.1.zip)][chrome-url]
+[![Button Alternative](https://github-readme-perks.vercel.app/api/button?content=Download%20%20&bgColor=%234796FF)][chrome-url]
 
 * Unzip tha downloaded file in a safe folder
 * Open extensions page (type 'chrome://extensions' on address bar)
@@ -25,7 +25,7 @@
 
 ### Mozilla
 
-[![Button Alternative](https://github-readme-perks.vercel.app/api/button?content=Download%20%20&link=https://github.com/pmqueiroz/basecamp-replier/archive/refs/tags/v0.0.1.zip)][mozilla-url]
+[![Button Alternative](https://github-readme-perks.vercel.app/api/button?content=Download%20%20&bgColor=%234796FF)][mozilla-url]
 
 * Save the downloaded file in a safe folder
 * Open extensions page (type 'about:addons' on address bar)
