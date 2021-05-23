@@ -7,22 +7,22 @@ while test $# -gt 0; do
       echo " "
       echo "options:"
       echo "-h, --help                show brief help"
-      echo "-n, --name=NAME       specify an action to use"
-      echo "-v, --version=DIR      specify a directory to store output in"
+      echo "-d, --dist=DIST       specify an dist to build"
+      echo "-v, --version=VERSION      specify a version to build name"
       exit 0
       ;;
-    -n)
+    -d)
       shift
       if test $# -gt 0; then
-        export NAME=$1
+        export DIST=$1
       else
-        echo "no name specified"
+        echo "no dist specified"
         exit 1
       fi
       shift
       ;;
-    --name*)
-      export NAME=`echo $1 | sed -e 's/^[^=]*=//g'`
+    --dist*)
+      export DIST=`echo $1 | sed -e 's/^[^=]*=//g'`
       shift
       ;;
     -v)
@@ -45,8 +45,6 @@ while test $# -gt 0; do
   esac
 done
 
-echo "building $NAME with $VERSION version"
+echo "building $DIST with $VERSION version"
 
-web-ext build --artifacts-dir=build --overwrite-dest --ignore-files=build.sh readme.md --filename="basecamp-replier-$VERSION-$NAME.zip"
-
-$SHELL
+web-ext build --artifacts-dir=build --overwrite-dest --ignore-files=build.sh readme.md --filename="basecamp-replier-$VERSION-$DIST.zip"
