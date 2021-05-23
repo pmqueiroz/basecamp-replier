@@ -3,13 +3,14 @@ let hideAuthor
 
 let hasChangedOnLastSeconds = false
 
+
 chrome.storage.sync.get({
    answerSymbol: '❯',
    hideAuthor: false
 }, function(items) {
    answerSymbol = items.answerSymbol
    hideAuthor = items.hideAuthor
-});
+})
 
 const input = document.getElementsByTagName('bc-require')[0].getElementsByTagName('trix-editor')[0]
 
@@ -46,6 +47,22 @@ function createMessage(previousMessageValue, messageValue) {
 }
 
 function insertReplyOnButton() {
+   console.info(`%c Basecamp Replier - Code inserted`, `color: Blue; font-size: 1rem;`)
+   let url = location.href
+   document.body.addEventListener('click', ()=>{
+      requestAnimationFrame(()=>{
+         if(url!==location.href){
+            if(hasChangedOnLastSeconds) {
+               return
+            } else {
+               hasChangedOnLastSeconds = true
+            }
+            url = location.href
+         } else {
+         }
+      })
+   }, true)
+
    Object.entries(messageContainers).map((messageContainerArr) => {
 
       const messageContainer = messageContainerArr[1]
@@ -90,4 +107,4 @@ setInterval(function(){
    }
 
    hasChangedOnLastSeconds = false
- }, 5000);
+ }, 5000)
