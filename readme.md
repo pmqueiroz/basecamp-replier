@@ -67,7 +67,7 @@ To install on Firefox you need first to download the `.xpi` file [here][firefox-
 - [ ] Options
    - [x] Switch display author name
    - [x] Change message prefix
-   - [ ] Change answer symbol
+   - [ ] Switch display all messages options
 
 ### Issues
 
