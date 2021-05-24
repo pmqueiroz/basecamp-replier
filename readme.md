@@ -7,6 +7,7 @@
 
 
 <h1 align="center">Basecamp 3 Replier Extension</h1>
+<p align="center">🚧 Project under development, consider report bugs (you'll find a lot of them)  🚧</p>
 <div align="center">
 
 ![donwloads](https://img.shields.io/github/downloads/pmqueiroz/basecamp-replier/total?color=%234796FF&logo=github)
