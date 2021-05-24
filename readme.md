@@ -4,6 +4,7 @@
 [license-url]: https://github.com/pmqueiroz/basecamp-replier/blob/master/license
 [issues-url]: https://github.com/pmqueiroz/basecamp-replier/issues
 [download-chrome-url]: https://chrome.google.com/webstore/detail/basecamp-replier/kbpbcopngomcnnoepbjbpjmidikdkcan
+[download-firefox-url]: https://addons.mozilla.org/pt-BR/firefox/addon/basecamp-replier/
 
 
 <h1 align="center">Basecamp 3 Replier Extension</h1>
@@ -13,7 +14,7 @@
 ![donwloads](https://img.shields.io/github/downloads/pmqueiroz/basecamp-replier/total?color=%234796FF&logo=github)
 ![version][version-badge]
 [![donwload-chrome](https://img.shields.io/badge/download-chrome-%234796FF?logo=google-chrome)][download-chrome-url]
-<!-- [![donwload-chrome](https://img.shields.io/badge/download-firefox-%234796FF?logo=firefox)](https://chrome.google.com/webstore/detail/basecamp-replier/kbpbcopngomcnnoepbjbpjmidikdkcan) -->
+[![donwload-firefox](https://img.shields.io/badge/download-firefox-%234796FF?logo=firefox)][download-firefox-url]
 
 </div>
 
@@ -52,13 +53,7 @@ Basecamp Replier Extension is now available on Chrome Web Store 🎉🎉 Click [
 
 #### Firefox
 
-To install on Firefox you need first to download the `.xpi` file [here][firefox-url]
-
-* Save the downloaded file in a safe folder
-* Open extensions page (type 'about:addons' on address bar)
-* Click on **Cog Icon** on the top of the page
-* Click on **Install from a file**
-* Select the extension file (#1)
+Basecamp Replier Extension is now available on Firefox Add-ons 🎉🎉 Click [here][download-firefox-url] to install
 
 ### Todo Features
 
